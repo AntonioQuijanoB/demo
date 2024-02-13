@@ -33,12 +33,12 @@ function multiplicacion(n1, n2) {
 multiplicacion(5, 7);
 // 8. Crea una función que imprima por consola el resultado de elevar al cubo un número dado como parámetro.
 function makeCubed(n1) {
-  console.log('El resultado es: ' + n1 ** 3);
+  return 'El resultado es: ' + n1 ** 3;
 }
 makeCubed(4);
 // 9. Crea una función que saque por consola el área de un rectángulo de dimensiones dadas como parámetro.
 function calcrectangle(n1, n2, res) {
-  console.log('El area del rectangulo es: ' + n1 * n2);
+  return 'El area del rectangulo es: ' + n1 * n2;
 }
 calcrectangle(6, 3);
 
@@ -72,17 +72,13 @@ function invertido(word) {
 invertido('ejecutar');
 // 14. Crea una función que devuelva la tabla de multiplicar de un número introducido como parámetro.
 // LLama a la función desde console.log() para que el resultado se imprima por consola
-function tabla(n1) {
-  console.log(n1 * 1);
-  console.log(n1 * 2);
-  console.log(n1 * 3);
-  console.log(n1 * 4);
-  console.log(n1 * 5);
-  console.log(n1 * 6);
-  console.log(n1 * 7);
-  console.log(n1 * 8);
-  console.log(n1 * 9);
-}
-tabla(4);
+const multiplication = (num) => {
+  let result = [];
+  for (let i = 0; i < 11; i++) {
+    result.push(num * i);
+  }
+  return result;
+};
+console.log(multiplication(5));
 // 15. Crea una función que reciba un número por parámetros y retorne si el número recibido es un número primo.
 // LLama a la función desde console.log() para que el resultado se imprima por consola
